@@ -4,4 +4,4 @@ function showNavigationBar() {
     let clon = temp.content.cloneNode(true);
     document.body.appendChild(clon);
 }
-document.getElementById("dat").innerHTML = showNavigationBar();
+document.getElementById("NavigationBar").innerHTML = showNavigationBar();
