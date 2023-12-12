@@ -5,88 +5,270 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 <style>
-.ConventioButton {
-background-image: url('/docs/assets/Icons/ConventioLutheriIcon.png') ;
-border: 2px solid red ;
-}
+   .bar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        width: 100%;
+        top: 0;
+    }
 
-.PonganButton {
-background-image: url('/docs/assets/Icons/PonganIcon.png');
-border: 2px solid red ;
-}
+    th.dot {
+        float: left;
+        border-right: 1px solid #bbb;
+        display: inline;
+        background-color: #333635;
+    }
 
-.LetItSlideButton {
-background-image: url('/docs/assets/Icons/LetItSlideIcon.png');
-border: 2px solid red ;
-}
+        th.dot a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-.EclipseExodusButton {
-background-image:  url('/docs/assets/Icons/LetItSlideIcon.png');
-border: 2px solid red ;
-}
+            /* Change the link color to #111 (black) on hover */
+            th.dot a:hover {
+                background-color: #111;
+            }
+
+    .active {
+        background-color: #04AA6D;
+    }
+
+    th.dot :last-child {
+        border-right: none;
+    }
 </style>
 
 
 <body style="font-family:Arial, Helvetica, sans-serif">
-
-    <object data="NavigationBar.html" width="100%" height="100%"><!--Something to display if the object tag fails to work. Possibly an iFrame--></object>
-    <!--Content goes here...-->
-    <table width="100%" height="100%">
+    
+    <div class="bar">
+    <table width="100%" height="10%">
         <tr>
-            <td colspan="2" align="center">
-                <h2>Unity Games</h2>
-            </td>
-            <td colspan="2" align="center">
-                <h2>Unreal engine Games</h2>
-            </td>
-        </tr>
-        <tr>
-            <td  colspan="4" valign="top">
-                <h3>Digital Bros Game Academy Games</h3>
-                <ul>
-                    <li>
-                        <a href="Pongan.html">
-                            <img src="/docs/assets/Icons/PonganIcon.png" width="10%" height="10%"> 
-                        </a>
-                        Pongan
-                    </li>
-                    <li>
-                        <a href="ConventioLutheri.html"> 
-                            <img src="/docs/assets/Icons/ConventioLutheriIcon.png"  width="10%" height="10%"> 
-                        </a>
-                        Conventio Lutheri
-                    </li>
-                    <li>
-                        <a href="LetItSlide.html">
-                            <img src="/docs/assets/Icons/LetItSlideIcon.png"  width="10%" height="10%"> 
-                        </a>
-                        Let It Slide
-                    </li>
-                    <li>
-                        <a href="EclipseExodus.html">
-                            <img src="/docs/assets/Icons/ConventioLutheriIcon.png"  width="10%" height="10%"> 
-                        </a>
-                        Eclipse Exodus
-                    </li>
-                </ul>
-            </td>
-
-           
-            <td colspan="4" valign="top">
-                <h3>Progetti individuali</h3>
-                <ul>
-                    <li>Flappy bird like game</li>
-                    <li>Lost planetMaze</li>
-                </ul>
-            </td>
-            <td  colspan="4" valign="top">
-                <h3>Digital Bros Game Academy Games</h3>
-            </td>
-            <td colspan="4" valign="top">
-                <h3>Progetti individuali</h3>
+            <td align="center" bgcolor="white">
+                <h1>Alessandro Arbasino Portofolio</h1>
             </td>
         </tr>
     </table>
+    
+    
+        <table width="100%" height="25%" >
+            <tr bgcolor="#333635">
+                <th class="dot"><a href="Contatti.html">Contatti</a></th>
+                <th class="dot"><a href="AboutMe.html">AboutMe</a></th>
+                <th class="dot"><a href="#contact">Contact</a></th>
+                <th class="dot" style="float:right"><a class="active" href="AboutMe.html">AboutMe</a></th>
+            </tr>
+        </table>
+    </div>
+
+
+
+<table width="100%">
+    <tr>
+        <td width="50%">
+            <table width="100%" height="100%">
+                <tr>
+                    <td align="center">
+                        <h2>Unity Games</h2>
+                    </td>
+                   
+                </tr>
+        
+                <tr>
+                    <td>
+                        <h3>Digital Bros Game Academy Games</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="Pongan.html">
+                                        <img src="/docs/assets/Icons/PonganIcon.png" width="10%" height="10%"> 
+                                    </a>
+                                </td>
+                                <td>
+                                    Pongan
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="ConventioLutheri.html">
+                                        <img src="/docs/assets/Icons/ConventioLutheriIcon.png" width="10%" height="10%"> 
+                                    </a>
+                                </td>
+                                <td>
+                                    ConventioLutheri
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="LetItSlide.html">
+                                        <img src="/docs/assets/Icons/LetItSlideIcon.png" width="10%" height="10%"> 
+                                    </a>
+                                </td>
+                                <td>
+                                    Let it Slide
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="EclipseExodus.html">
+                                        <img src="/docs/assets/Icons/ConventioLutheriIcon.png" width="10%" height="10%"> 
+                                    </a>
+                                </td>
+                                <td>
+                                    EclipseExodus
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Progetti individuali</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="LostPlanetMaze.html">
+                                        <img src="/docs/assets/Icons/LostPlanetMazeIcon.png"  width="10%" height="10%"> 
+                                    </a>
+                                </td>
+                                <td>
+                                    Lost planetMaze
+                                </td>
+                            
+                            </tr>
+        
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    Flappy bird like game
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Game jam</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="RenderingRevenge.html">
+                                        <img src="/docs/assets/Icons/RenderingRevengeIcon.png"  width="10%" height="10%"> 
+                                    </a> 
+                                </td>
+                                <td>
+                                    Rendering Revenge
+                                </td>
+                            
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td td width="50%">
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td width="50%" >
+            &nbsp;
+        </td>
+        <td width="50%">
+            <table width="100%" height="100%">
+                <tr>
+                    <td align="center">
+                        <h2>Unreal engine</h2>
+                    </td>
+                   
+                </tr>
+        
+                <tr>
+                    <td align="right">
+                        <h3>Digital Bros Game Academy Games</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <h3>Progetti individuali</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <h3>Game jam</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+    
+
+    
 
 </body>
 </html>
