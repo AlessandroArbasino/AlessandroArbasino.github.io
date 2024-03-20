@@ -8,8 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build": "babel src -d lib",
-    "predeploy": "yarn run build",
+    "build": "babel src/ -d lib/",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
@@ -28,7 +28,8 @@
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.1",
     "@types/react": "~18.2.14",
     "gh-pages": "^6.1.1",
     "tailwindcss": "3.3.2",
