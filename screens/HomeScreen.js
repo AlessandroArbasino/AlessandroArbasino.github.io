@@ -50,40 +50,28 @@ useLayoutEffect(()=> {
 
 <View className="flex-1 flex-row space-y-5">
 
-if (Platform.OS === 'web') {
-            <View className="flex-2"></View>
-        }
-        
         <View className="flex-1 space-y-5">
             <View className=" flex-1 flex-row flex-wrap">
-                {/* presentation view*/}
                 <View className="flex-1">
-                    {/* preesentaton*/}
                     <View className="space-y-2">
-                        {/* preesentaton text view*/}
                         <Text className="text-green-400 font-semibold text-xl">Hi,i'm Alessandro Arbasino</Text>
                         <Text className="text-white">I'm a videogame programmer</Text>
                         <Text className="text-white text-xs">I'm from italy and iì'been start studing at digital bross game academy since 1 year</Text>
                     </View>
                     <View>
-                        {/* contact buttons view*/}
                     </View>
                 </View>
                 
                 <View className="flex-1">
-                     {/* image*/}
                      <Animatable.Image source={LaureaImage} style= {{flex:1 ,width: '100%',height: '100%', resizeMode: 'contain'}}className="rounded-lg" animation="fadeIn"></Animatable.Image>
                 </View>
         </View>
 
-{/* skills*/}
         <View className="flex-1">
-             {/* skills title*/}
              <View className="h-16 items-center">
                 <Text className="text-white text-2xl font-semibold">Tools and Skills</Text>
              </View>
 
-            {/* skills cards*/}
             <View className="flex-1 bg-white border-l-8 border-r-8 rounded-xl space-y-1">
                 <View className="mt-3 px-3 flex-1">
                     <View className="flex-row flex-1">
@@ -128,17 +116,11 @@ if (Platform.OS === 'web') {
         </View>
 
         <View className="h-10 items-center flex-row">
-             {/* cv download*/}
              <DownloadButton  key={"DownloadEuropass"}title="Download europass CV" DonloadFilePath={EuropassCV}></DownloadButton>
              <DownloadButton key={"DownloadLatex"} title="Download Latex CV" DonloadFilePath={EuropassCV}></DownloadButton>
              <Text className="text-white">download CV</Text>
         </View>
         </View>
-        if (Platform.OS === 'web') {
-            <View className="flex-2">
-
-            </View>
-}
 </View>
     </SafeAreaView>
   );
