@@ -7,6 +7,7 @@ import Projects from './screens/Projects';
 
 import UnityProjects from './screens/UnityProject';
 import UnrealEngineProjects from './screens/UnrealEngineProject';
+import PureProgrammingLanguageProjects from './screens/PureProgrammingLanguageProjects';
 
 import { NativeWindStyleSheet } from "nativewind";
 import PonganGamePage from './screens/GamesPages/Pongan';
@@ -31,6 +32,7 @@ export default function App() {
            <Stack.Screen name="Projects" component={Projects} />
            <Stack.Screen name="UnityProjects" component={UnityProjects} />
            <Stack.Screen name="UnralEngineProjects" component={UnrealEngineProjects} />
+           <Stack.Screen name="PureProgrammingLanguageProjects" component={PureProgrammingLanguageProjects} />
 
            <Stack.Screen name="PonganGamePage" component={PonganGamePage} />
            <Stack.Screen name="ConventioLutheriGamePage" component={ConventioLutheriGamePage} />

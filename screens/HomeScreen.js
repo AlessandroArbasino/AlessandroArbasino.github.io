@@ -72,9 +72,9 @@ useLayoutEffect(()=> {
                 <Text className="text-white text-2xl font-semibold">Tools and Skills</Text>
              </View>
 
-            <View className="flex-1 bg-white border-l-8 border-r-8 rounded-xl space-y-1">
-                <View className="mt-3 px-3 flex-1">
-                    <View className="flex-row flex-1">
+            <View className="flex-1 bg-white border-l-8 border-r-8 rounded-xl space-y-1 justify-items-center">
+            <View className=" flex-wrap bg-white flex-row px-4 py-3 rounded-lg" >
+                
                             <SkillCard key={"Unity"}
                                 title={"Unity"} 
                                 imagesrc ={UnityLogoSkill}
@@ -98,19 +98,14 @@ useLayoutEffect(()=> {
                                 imagesrc ={LatexLogoSkill}
                                 documentationURL ="https://www.latex-project.org/help/documentation/">
                             </SkillCard>
-                            </View>
-                            <View className="flex-row flex-1">
+                        
+                    
                             
                             <SkillCard key={"TailwindCSS"}
                                 title={"TailwindCSS"} 
                                 imagesrc ={TailwindCSSLogoSkill}
                                 documentationURL ="https://v2.tailwindcss.com/docs">
                             </SkillCard>
-
-                            <View className="flex-1"></View>
-                            <View className="flex-1"></View>
-                            <View className="flex-1"></View>
-                            </View>
                             </View>
             </View>
         </View>

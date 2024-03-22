@@ -5,11 +5,13 @@ import {CSharpLogoSkill, LatexLogoSkill, LaureaImage, TailwindCSSLogoSkill, Unit
 
 const SkillCard = ({title,imagesrc,documentationURL}) => {
   return (
+    <View className="w-32 h-32 flex-col">
     <Pressable className="items-center justify-center px-1  aspect-square"  onPress={()=>Linking.openURL(documentationURL)}>
-        <View className=" w-full h-full rounded-lg ">
+        <View  className="h-full w-full object-contain rounded-lg">
             <Image source={imagesrc} style= {{flex:1 ,width: '100%',height: '100%', resizeMode: 'contain'}}></Image >
         </View>
     </Pressable>
+    </View>
   )
 }
 

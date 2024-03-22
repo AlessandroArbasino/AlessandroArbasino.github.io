@@ -10,6 +10,7 @@ export {default as CSharpLogoSkill} from "./LogoSkills/CSharpLogoSkill.jpg";
 
 export {default as UnrealEngineLogoProjects} from "./Logos/UnrealEngineLogo.webp";
 export {default as UnityLogoProjects} from "./Logos/UnityLogo.jpg";
+export {default as PureProgrammingLanguageProjects} from "./Logos/PureProgramminglanguageProject.webp";
 
 export {default as TeamWorkingLogo} from "./SocialSkillsLogos/TeamWorkingLogo.jpg";
 export {default as ProblemSolvingLogo} from "./SocialSkillsLogos/ProblemSolvingLogo.png";

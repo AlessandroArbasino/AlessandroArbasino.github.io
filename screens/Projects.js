@@ -7,9 +7,10 @@ import { Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ProblemSolvingLogo, TeamWorkingLogo, UnityLogoProjects, UnrealEngineLogoProjects } from '../assets';
 import * as Animatable from 'react-native-animatable';
-import {CSharpLogoSkill, LatexLogoSkill, LaureaImage, TailwindCSSLogoSkill, UnityLogoSkill, UnrealEngineLogoSkill} from '../assets';
+import {CSharpLogoSkill, LatexLogoSkill, LaureaImage, TailwindCSSLogoSkill, UnityLogoSkill, UnrealEngineLogoSkill,PureProgrammingLanguageProjects} from '../assets';
 import SocialSkillCard from '../components/SocialSkillCard';
 import TitleGoBack from '../components/TitleGoBack';
+import EngineProjects from '../components/EngineProjects';
 
 const Projects = () => {
   const Navigation=useNavigation();
@@ -22,7 +23,7 @@ const Projects = () => {
 
 
   return (
-    <SafeAreaView  className="flex-1 relative bg-black border-l-8 border-r-8">
+    <SafeAreaView  className="flex-1 relative bg-black border-l-8 border-r-8 space-y-4 border-b-8">
  
       <View>
         <TitleGoBack 
@@ -31,39 +32,28 @@ const Projects = () => {
       </TitleGoBack>
       </View>
  
-<View className="flex-1 flex-row">
-
-if (Platform.OS === 'web') {
-            <View className="flex-2"></View>
-        }
-<View className="flex-1 space-y-3">
-         {/* unreal engine projects*/}
-        <View className="rounded-lg flex-1 border-l-8 border-r-8">
-          <Pressable className="flex-1"onPress={()=> Navigation.navigate("UnralEngineProjects")}>
-              <Animatable.Image style= {{flex:1 ,width: undefined,height: '100%', resizeMode:'stretch'}} source={UnrealEngineLogoProjects} className="rounded-lg" animation="fadeIn"></Animatable.Image>
-          </Pressable>
-        </View>
-        
-        <View className="rounded-3xl" style={{alignItems : 'baseline'}}>
-          <Pressable className="bg-green-400 rounded-lg px-3" onPress={()=> Navigation.navigate("UnralEngineProjects")}>
-          <Text className="text-white font-semibold">For more information</Text>
-          </Pressable>
-        </View>
- {/* unity projects*/}
-        <View className="rounded-lg flex-1 border-l-8 border-r-8">
-          <Pressable  className="flex-1"onPress={()=> Navigation.navigate("UnityProjects")}>
-              <Animatable.Image style= {{flex:1 ,width: undefined,height: '100%', resizeMode:'stretch'}} source={UnityLogoProjects} className=" rounded-lg" animation="fadeIn"></Animatable.Image>
-          </Pressable>
-        </View>
-
-        <View className="rounded-3xl" style={{alignItems : 'baseline'}}>
-          <Pressable  className="bg-green-400 rounded-lg px-3" onPress={()=> Navigation.navigate("UnityProjects")}>
-             <Text className=" text-white font-semibold">For more information</Text>
-          </Pressable>
-        </View>
-        <View className="bg-white rounded-lg">
+<View className="flex-1 flex-col space-y-3 ">
+    <View className="flex-1 flex-row border-l-8 border-r-8 space-y-3">
+         <EngineProjects  key={"UnrealEngine"}
+            title={"Unreal"} 
+            imagesrc ={UnrealEngineLogoProjects} 
+            pageToOpen ={"UnralEngineProjects"}>
+          </EngineProjects>
+          <EngineProjects  key={"UnityProject"}
+            title={"Unity"} 
+            imagesrc ={UnityLogoProjects} 
+            pageToOpen ={"UnityProjects"}>
+          </EngineProjects>
+          <EngineProjects  key={"PureLanguageProjet"}
+            title={"PureLanguage"} 
+            imagesrc ={PureProgrammingLanguageProjects} 
+            pageToOpen ={"PureProgrammingLanguageProjects"}>
+          </EngineProjects>
+      </View>
+      <View className="bg-white rounded-lg">
 
           <View className="flex-row flex-wrap">
+
             <View className="flex-1 py-3">
               <Text className=" px-2 text-lg">Interested in working with me</Text>
             </View>
@@ -98,10 +88,6 @@ if (Platform.OS === 'web') {
       </View>
 
       
-      </View>
-      if (Platform.OS === 'web') {
-            <View className="flex-2"></View>
-        }
       </View>
     </SafeAreaView>
 
