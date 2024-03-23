@@ -17,6 +17,8 @@ import EclipseExodusGamePage from './screens/GamesPages/EclipseExodus';
 import LostPlanetMazeGamePage from './screens/GamesPages/LostPlanetMaze';
 import FlappyBirdLikeGamePage from './screens/GamesPages/FlappyBirdLike';
 import RenderingRevengeGamePage from './screens/GamesPages/RenderingRevenge';
+import MyLastNeuronGamePage from './screens/GamesPages/MyLastNeuron';
+import CppTextAdventureGamePage from './screens/GamesPages/CppTextAdventure';
 
 const Stack=createNativeStackNavigator();
 
@@ -41,6 +43,8 @@ export default function App() {
            <Stack.Screen name="LostPlanetMazeGamePage" component={LostPlanetMazeGamePage} />
            <Stack.Screen name="FlappyBirdLikeGamePage" component={FlappyBirdLikeGamePage} />
            <Stack.Screen name="RenderingRevengeGamePage" component={RenderingRevengeGamePage} />
+           <Stack.Screen name="MyLastNeuronGamePage" component={MyLastNeuronGamePage} />
+           <Stack.Screen name="CppTextAdventureGamePage" component={CppTextAdventureGamePage} />
         </Stack.Navigator>
       </NavigationContainer>
   );

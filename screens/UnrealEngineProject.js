@@ -1,7 +1,9 @@
-import { View, Text,ScrollView } from 'react-native'
-import React, { useLayoutEffect, useState } from 'react'
+import { View, Text,ScrollView} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
+import React, { useLayoutEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import GameCard from '../components/GameCard';
+import { ConventioLutheriLogo, EclipseExodusLogo, FlappyBirdLikeLogo, LetItSlideLogo, LostPlanetMazeLogo, PonganLogo, RenderingRevengeLogo } from '../assets';
 import TitleGoBack from '../components/TitleGoBack';
 import GameHorizScrollView from '../components/GameHorizScrollView';
 import { Platform } from 'react-native';
@@ -12,7 +14,13 @@ const UnrealEngineProject = () => {
 
   const DigitalBrossGames = [];
   const SelfDevelopedGames = [];
-  const GameJamGames = [];
+  const GameJamGames = [
+  <GameCard 
+    key={"MyLastNeuron"}
+    title={"MyLastNeuron"}
+    imagesrc={RenderingRevengeLogo}
+    gamePagePath={"MyLastNeuronAdventureGamePage"}>
+  </GameCard>];
 
   useLayoutEffect(()=> {
     Navigation.setOptions({
@@ -30,9 +38,6 @@ const UnrealEngineProject = () => {
     </View>
 
     <View className="flex-row flex-1 space-y-7">
-    if (Platform.OS === 'web') {
-          <View className="flex-2"></View>
-      }
 
     <View className="flex-1 ">
       <GameHorizScrollView className="flex-1"  key={"DigitalBrossGameAcademyProjects"} title="Digital Bross Game Academy Projects" games={DigitalBrossGames}></GameHorizScrollView>
@@ -40,9 +45,6 @@ const UnrealEngineProject = () => {
       <GameHorizScrollView className="flex-1"  key={"GameJam"} title="Game Jam" games={GameJamGames}></GameHorizScrollView>
     </View>
 
-          if (Platform.OS === 'web') {
-          <View className="flex-2"></View>
-      }
   </View>
   </SafeAreaView>
   )

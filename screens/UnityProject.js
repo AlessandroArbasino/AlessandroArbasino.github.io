@@ -81,19 +81,13 @@ const UnityProject = () => {
       </View>
 
       <View className="flex-row flex-1 space-y-7">
-      if (Platform.OS === 'web') {
-            <View className="flex-2"></View>
-        }
-
+ 
       <View className="flex-1 ">
         <GameHorizScrollView key={"DigitalBrossGameAcademyProjects"} title="Digital Bross Game Academy Projects" games={DigitalBrossGames}></GameHorizScrollView>
         <GameHorizScrollView key={"IndividualProjects"} title="Individual Projects" games={SelfDevelopedGames}></GameHorizScrollView>
         <GameHorizScrollView key={"GameJam"} title="Game Jam" games={GameJamGames}></GameHorizScrollView>
       </View>
 
-            if (Platform.OS === 'web') {
-            <View className="flex-2"></View>
-        }
     </View>
     </SafeAreaView>
   )

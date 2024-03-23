@@ -13,7 +13,13 @@ const PureProgrammingLanguageProjects = () => {
   const Navigation=useNavigation();
 
   const C89Projects = [];
-  const CppProjects= [];
+  const CppProjects= [
+    <GameCard 
+      key={"CppTextAdventure"}
+      title={"CppTextAdventure"}
+      imagesrc={RenderingRevengeLogo}
+      gamePagePath={"CppTextAdventureGamePage"}>
+    </GameCard>];
   const CSharpProjects = [];
 
   useLayoutEffect(()=> {

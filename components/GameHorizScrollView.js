@@ -7,13 +7,7 @@ const GameHorizScrollView = ({title,games}) => {
     const result = [];
 
     games.forEach(CurrentGamecard => {
-                result.push( 
-                     <GameCard 
-                    key={CurrentGamecard.key}
-                    title={CurrentGamecard.title}
-                    imagesrc={CurrentGamecard.imagesrc}
-                    gamePagePath={CurrentGamecard.gamePagePath}>
-                </GameCard> );
+                result.push( CurrentGamecard);
             })
 
   return (
