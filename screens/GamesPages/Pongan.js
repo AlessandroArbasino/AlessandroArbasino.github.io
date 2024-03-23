@@ -2,6 +2,7 @@ import { View, Text ,SafeAreaView} from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
+import MyLinks from '../../components/MyLinks'
 
 const Pongan = () => {
 
@@ -21,6 +22,7 @@ const Pongan = () => {
         Title="Pongan">
       </TitleGoBack>
       </View>
+      <MyLinks></MyLinks>
     </SafeAreaView>
   )
 }

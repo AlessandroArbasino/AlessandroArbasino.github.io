@@ -7,6 +7,7 @@ import { ConventioLutheriLogo, EclipseExodusLogo, FlappyBirdLikeLogo, LetItSlide
 import TitleGoBack from '../components/TitleGoBack';
 import GameHorizScrollView from '../components/GameHorizScrollView';
 import { Platform } from 'react-native';
+import MyLinks from '../components/MyLinks';
 
 const UnrealEngineProject = () => {
 
@@ -19,7 +20,7 @@ const UnrealEngineProject = () => {
     key={"MyLastNeuron"}
     title={"MyLastNeuron"}
     imagesrc={RenderingRevengeLogo}
-    gamePagePath={"MyLastNeuronAdventureGamePage"}>
+    gamePagePath={"MyLastNeuronGamePage"}>
   </GameCard>];
 
   useLayoutEffect(()=> {
@@ -46,6 +47,7 @@ const UnrealEngineProject = () => {
     </View>
 
   </View>
+  <MyLinks></MyLinks>
   </SafeAreaView>
   )
 }

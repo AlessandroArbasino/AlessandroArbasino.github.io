@@ -8,6 +8,7 @@ import SkillCard from '../components/SkillCard';
 import DownloadButton from '../components/DownloadButton';
 import EuropassCV from '../assets/Files/AlessandroArbasinoCVEuropass.pdf'
 import { Platform } from 'react-native';
+import MyLinks from '../components/MyLinks';
 
 
 const HomeScreen = () => {
@@ -20,7 +21,7 @@ useLayoutEffect(()=> {
 },[]);
 
   return (
-    <SafeAreaView className="flex-1 relative bg-black">
+    <SafeAreaView className="flex-1 relative bg-black space-y-3">
 
         
         <View className="px-6 bg-white h-16 ">
@@ -109,13 +110,10 @@ useLayoutEffect(()=> {
                             </View>
             </View>
         </View>
-
-        <View className="h-10 items-center flex-row">
-             <DownloadButton  key={"DownloadEuropass"}title="Download europass CV" DonloadFilePath={EuropassCV}></DownloadButton>
-             <DownloadButton key={"DownloadLatex"} title="Download Latex CV" DonloadFilePath={EuropassCV}></DownloadButton>
-             <Text className="text-white">download CV</Text>
         </View>
-        </View>
+</View>
+<View className="flex-wrap bottom-2">
+    <MyLinks key={"Links"}></MyLinks>
 </View>
     </SafeAreaView>
   );

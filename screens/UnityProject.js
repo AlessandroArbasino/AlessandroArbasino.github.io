@@ -7,6 +7,7 @@ import { ConventioLutheriLogo, EclipseExodusLogo, FlappyBirdLikeLogo, LetItSlide
 import TitleGoBack from '../components/TitleGoBack';
 import GameHorizScrollView from '../components/GameHorizScrollView';
 import { Platform } from 'react-native';
+import MyLinks from '../components/MyLinks';
 
 const UnityProject = () => {
   const Navigation=useNavigation();
@@ -89,6 +90,7 @@ const UnityProject = () => {
       </View>
 
     </View>
+    <MyLinks></MyLinks>
     </SafeAreaView>
   )
 }

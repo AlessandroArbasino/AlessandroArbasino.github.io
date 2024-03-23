@@ -11,6 +11,7 @@ import {CSharpLogoSkill, LatexLogoSkill, LaureaImage, TailwindCSSLogoSkill, Unit
 import SocialSkillCard from '../components/SocialSkillCard';
 import TitleGoBack from '../components/TitleGoBack';
 import EngineProjects from '../components/EngineProjects';
+import MyLinks from '../components/MyLinks';
 
 const Projects = () => {
   const Navigation=useNavigation();
@@ -89,6 +90,8 @@ const Projects = () => {
 
       
       </View>
+
+      <MyLinks></MyLinks>
     </SafeAreaView>
 
   )

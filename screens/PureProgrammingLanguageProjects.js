@@ -7,6 +7,7 @@ import { ConventioLutheriLogo, EclipseExodusLogo, FlappyBirdLikeLogo, LetItSlide
 import TitleGoBack from '../components/TitleGoBack';
 import GameHorizScrollView from '../components/GameHorizScrollView';
 import { Platform } from 'react-native';
+import MyLinks from '../components/MyLinks';
 
 const PureProgrammingLanguageProjects = () => {
 
@@ -47,6 +48,7 @@ const PureProgrammingLanguageProjects = () => {
       </View>
 
     </View>
+    <MyLinks></MyLinks>
     </SafeAreaView>
   )
 }

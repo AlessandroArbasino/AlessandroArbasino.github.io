@@ -1,17 +1,15 @@
-import { View, Text,Pressable } from 'react-native'
+import { View, Text,Pressable,Linking } from 'react-native'
 import React from 'react'
+import cv from "../assets/Files/AlessandroArbasinoCVEuropass.pdf"
 
 
 const DownloadButton = ({DonloadFilePath,Buttontext}) => {
   return (
-      <Pressable href={DonloadFilePath}
-        download="CVPdf"
-        target="_blank"
-        rel="noreferred">
-            <View className="flex-row h-3 w-10">
-                <Text className="text-white">{Buttontext}</Text>
-            </View>
-      </Pressable>
+    <View className="flex-1 bg-white rounded-lg">
+     <Pressable onPress={()=> Linking.openURL(DonloadFilePath)}>
+        <Text  style={{textAlignVertical: 'center'}}  className="text-black">{Buttontext}</Text>
+     </Pressable>
+    </View>
   )
 }
 
