@@ -24,7 +24,7 @@ const Projects = () => {
 
 
   return (
-    <SafeAreaView  className="flex-1 relative bg-black border-l-8 border-r-8 space-y-4 border-b-8">
+    <SafeAreaView  className="flex-1 relative bg-black border-l-8 border-r-8 border-b-8 space-y-3">
  
       <View>
         <TitleGoBack 
@@ -91,7 +91,9 @@ const Projects = () => {
       
       </View>
 
-      <MyLinks></MyLinks>
+      <View className="flex-wrap bottom-2">
+        <MyLinks key={"Links"}></MyLinks>
+      </View>
     </SafeAreaView>
 
   )

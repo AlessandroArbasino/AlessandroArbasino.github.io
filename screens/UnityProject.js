@@ -90,7 +90,9 @@ const UnityProject = () => {
       </View>
 
     </View>
-    <MyLinks></MyLinks>
+    <View className="flex-wrap bottom-2">
+        <MyLinks key={"Links"}></MyLinks>
+      </View>
     </SafeAreaView>
   )
 }

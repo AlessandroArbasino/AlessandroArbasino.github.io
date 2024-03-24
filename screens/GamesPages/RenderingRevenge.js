@@ -21,8 +21,9 @@ const RenderingRevenge = () => {
       key={"RenderingRevenge"}
       Title="Rendering Revenge">
     </TitleGoBack>
-    </View>
-    <MyLinks></MyLinks>
+    </View><View className="flex-wrap bottom-2">
+        <MyLinks key={"Links"}></MyLinks>
+      </View><MyLinks></MyLinks>
   </SafeAreaView>
   )
 }

@@ -8,6 +8,10 @@ import {EuropassCv,LatexCv} from '../assets';
 const MyLinks = () => {
   return (
     <View className=" flex-row space-x-4 right-2 left-2">
+
+      <View className="text-white flex-wrap justify-center">
+        <Text className="text-white ">Social Media Accounts :</Text>
+      </View>
       <View>
         <SocialIcon url="https://github.com/AlessandroArbasino" ></SocialIcon>
       </View>
@@ -15,6 +19,9 @@ const MyLinks = () => {
         <SocialIcon url="https://it.linkedin.com/in/alessandro-arbasino" ></SocialIcon>
       </View>
 
+      <View className="text-white flex-wrap justify-center">
+        <Text className="text-white">Curriculum Vitae :</Text>
+      </View>
       <View>
         <DownloadButton  key={"DownloadEuropass"}title={"DownloadEuropassCV"} Buttontext={"Open Europass CV"} DonloadFilePath="https://github.com/AlessandroArbasino/AlessandroArbasino.github.io/blob/main/assets/Files/AlessandroArbasinoCVEuropass.pdf"></DownloadButton>
       </View>

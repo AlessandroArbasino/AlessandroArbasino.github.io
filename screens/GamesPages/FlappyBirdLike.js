@@ -22,7 +22,9 @@ const FlappyBirdLike = () => {
       Title="Flappy Bird Like">
     </TitleGoBack>
     </View>
-    <MyLinks></MyLinks>
+    <View className="flex-wrap bottom-2">
+        <MyLinks key={"Links"}></MyLinks>
+      </View>
   </SafeAreaView>
   )
 }

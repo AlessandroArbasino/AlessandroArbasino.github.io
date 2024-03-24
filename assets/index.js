@@ -18,7 +18,7 @@ export {default as ProblemSolvingLogo} from "./SocialSkillsLogos/ProblemSolvingL
 export {default as PonganLogo} from "./Icons/PonganIcon.png";
 export {default as ConventioLutheriLogo} from "./Icons/ConventioLutheriIcon.png";
 export {default as LetItSlideLogo} from "./Icons/LetItSlideIcon.png";
-export {default as EclipseExodusLogo} from "./Icons/ConventioLutheriIcon.png";
+export {default as EclipseExodusLogo} from "./Icons/EclipseExodusIcon.png";
 export {default as RenderingRevengeLogo} from "./Icons/RenderingRevengeIcon.png";
 export {default as LostPlanetMazeLogo} from "./Icons/LostPlanetMazeIcon.png";
 export {default as FlappyBirdLikeLogo} from "./Icons/RenderingRevengeIcon.png";
