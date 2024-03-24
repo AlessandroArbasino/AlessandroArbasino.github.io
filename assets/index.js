@@ -22,3 +22,4 @@ export {default as EclipseExodusLogo} from "./Icons/ConventioLutheriIcon.png";
 export {default as RenderingRevengeLogo} from "./Icons/RenderingRevengeIcon.png";
 export {default as LostPlanetMazeLogo} from "./Icons/LostPlanetMazeIcon.png";
 export {default as FlappyBirdLikeLogo} from "./Icons/RenderingRevengeIcon.png";
+export {default as MYLastNeuronLogo} from "./Icons/MyLastNeuron.png";

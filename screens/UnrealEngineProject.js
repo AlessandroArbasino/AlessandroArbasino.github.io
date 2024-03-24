@@ -3,7 +3,7 @@ import { useNavigation } from '@react-navigation/native'
 import React, { useLayoutEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import GameCard from '../components/GameCard';
-import { ConventioLutheriLogo, EclipseExodusLogo, FlappyBirdLikeLogo, LetItSlideLogo, LostPlanetMazeLogo, PonganLogo, RenderingRevengeLogo } from '../assets';
+import { MYLastNeuronLogo } from '../assets';
 import TitleGoBack from '../components/TitleGoBack';
 import GameHorizScrollView from '../components/GameHorizScrollView';
 import { Platform } from 'react-native';
@@ -19,7 +19,7 @@ const UnrealEngineProject = () => {
   <GameCard 
     key={"MyLastNeuron"}
     title={"MyLastNeuron"}
-    imagesrc={RenderingRevengeLogo}
+    imagesrc={MYLastNeuronLogo}
     gamePagePath={"MyLastNeuronGamePage"}>
   </GameCard>];
 
