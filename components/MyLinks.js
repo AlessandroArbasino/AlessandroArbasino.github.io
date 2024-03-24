@@ -18,6 +18,9 @@ const MyLinks = () => {
       <View>
         <SocialIcon url="https://it.linkedin.com/in/alessandro-arbasino" ></SocialIcon>
       </View>
+      <View>
+        <SocialIcon url="https://discord.com/users/598926671956934666" ></SocialIcon>
+      </View>
 
       <View className="text-white flex-wrap justify-center">
         <Text className="text-white">Curriculum Vitae :</Text>
