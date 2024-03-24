@@ -16,11 +16,11 @@ const MyLinks = () => {
       </View>
 
       <View>
-        <DownloadButton  key={"DownloadEuropass"}title={"DownloadEuropassCV"} Buttontext={"Open Europass CV"} DonloadFilePath="../assets/Files/AlessandroArbasinoCVEuropass.pdf"></DownloadButton>
+        <DownloadButton  key={"DownloadEuropass"}title={"DownloadEuropassCV"} Buttontext={"Open Europass CV"} DonloadFilePath="https://github.com/AlessandroArbasino/AlessandroArbasino.github.io/blob/main/assets/Files/AlessandroArbasinoCVEuropass.pdf"></DownloadButton>
       </View>
 
       <View>
-        <DownloadButton key={"DownloadLatex"} title={"DownloadLatexCV"}  Buttontext={"Open Latex CV"} DonloadFilePath="../assets/Files/AlessandroArbasinoCVLatex.pdf"></DownloadButton>
+        <DownloadButton key={"DownloadLatex"} title={"DownloadLatexCV"}  Buttontext={"Open Latex CV"} DonloadFilePath="https://github.com/AlessandroArbasino/AlessandroArbasino.github.io/blob/main/assets/Files/AlessandroArbasinoCVLatex.pdf"></DownloadButton>
       </View>
     </View>
   )
