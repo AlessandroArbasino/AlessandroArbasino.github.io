@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
+import {ConventioLutheriVideo} from '../../assets/index';
 
 const ConventioLutheri = () => {
 
@@ -23,7 +24,7 @@ const ConventioLutheri = () => {
       </TitleGoBack>
       </View>
 
-      <video width="750" height="500" src="/AlessandroArbasino.github.io/assets/Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4" controls id="VideoGamePlay"></video>
+      <video width="750" height="500" source={ConventioLutheriVideo} controls id="VideoGamePlay"></video>
 
      <View className="flex-wrap">
      <Text className="text-white">

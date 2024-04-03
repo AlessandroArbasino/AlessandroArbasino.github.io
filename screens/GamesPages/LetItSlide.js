@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
+import {LetItSlideVideo} from '../../assets/index';
 const LetItSlide = () => {
 
   const Navigation=useNavigation();
@@ -22,7 +23,7 @@ const LetItSlide = () => {
       </TitleGoBack>
       </View>
 
-      <video width="750" height="500" src='/../assets/Unity/LetItSlide/Team02_Trailer_Letitslide_Release.mp4' controls id="VideoGamePlay"  autoPlay></video>
+      <video width="750" height="500" source={LetItSlideVideo} controls id="VideoGamePlay"  autoPlay></video>
 
      <View className="flex-wrap">
      <Text className="text-white">

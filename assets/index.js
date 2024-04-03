@@ -63,3 +63,6 @@ export {default as JoinLobby} from "./Unity/LostPlanetMaze/JoinLobby.png";
 export {default as LobbyCreation} from "./Unity/LostPlanetMaze/LobbyCreation.png";
 export {default as MultiplayerGame} from "./Unity/LostPlanetMaze/MultiplayerGame.png";
 export {default as WaitingRoom} from "./Unity/LostPlanetMaze/WaitingRoom.png";
+
+export {default as ConventioLutheriVideo} from "./Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4";
+export {default as LetItSlideVideo} from "./Unity/LetItSlide/Team02_Trailer_Letitslide_Release.mp4";
