@@ -23,7 +23,7 @@ const RenderingRevenge = () => {
     </TitleGoBack>
     </View><View className="flex-wrap bottom-2">
         <MyLinks key={"Links"}></MyLinks>
-      </View><MyLinks></MyLinks>
+      </View>
   </SafeAreaView>
   )
 }

@@ -26,6 +26,7 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-web": "~0.19.6",
+    "react-player": "^2.15.1",
     "react-social-icons": "^6.15.0"
   },
   "devDependencies": {
