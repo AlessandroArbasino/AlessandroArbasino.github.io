@@ -23,9 +23,7 @@ const ConventioLutheri = () => {
       </TitleGoBack>
       </View>
 
-      <video width="750" height="500" controls >
-      <source src="/AlessandroArbasino.github.io/assets/Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4"/>
-     </video>
+      <video width="750" height="500" src="/AlessandroArbasino.github.io/assets/Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4" controls id="VideoGamePlay"></video>
 
      <View className="flex-wrap">
      <Text className="text-white">

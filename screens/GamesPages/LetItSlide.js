@@ -22,9 +22,7 @@ const LetItSlide = () => {
       </TitleGoBack>
       </View>
 
-      <video width="750" height="500" controls >
-      <source src="/AlessandroArbasino.github.io/assets/Unity/LetItSlide/Team02_Trailer_Letitslide_Release.mp4"/>
-     </video>
+      <video width="750" height="500" src="/AlessandroArbasino.github.io/assets/Unity/LetItSlide/Team02_Trailer_Letitslide_Release.mp4" controls id="VideoGamePlay"></video>
 
      <View className="flex-wrap">
      <Text className="text-white">
