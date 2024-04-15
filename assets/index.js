@@ -36,7 +36,7 @@ export {default as TakeViolinNeck} from "./Unity/ConventioLutheri/TakeViolinNeck
 export {default as ViolinBuilt} from "./Unity/ConventioLutheri/ViolinBuilt.png";
 export {default as ViolinPainted} from "./Unity/ConventioLutheri/ViolinPainted.png";
 
-export {default as EclipseExodus} from "./Unity/EclipseExodus/EclipseExodus.png";
+export {default as EclipseExodusImage} from "./Unity/EclipseExodus/EclipseExodus.png";
 export {default as Overlay} from "./Unity/EclipseExodus/Overlay.png";
 export {default as SunMode} from "./Unity/EclipseExodus/SunMode.png";
 export {default as Take} from "./Unity/EclipseExodus/Take.png";
@@ -63,6 +63,12 @@ export {default as JoinLobby} from "./Unity/LostPlanetMaze/JoinLobby.png";
 export {default as LobbyCreation} from "./Unity/LostPlanetMaze/LobbyCreation.png";
 export {default as MultiplayerGame} from "./Unity/LostPlanetMaze/MultiplayerGame.png";
 export {default as WaitingRoom} from "./Unity/LostPlanetMaze/WaitingRoom.png";
+
+export {default as AiBasedEnemy} from "./Unity/RenderingRevenge/AiBasedEnemy.png";
+export {default as BulletHellBoss} from "./Unity/RenderingRevenge/BulletHellBoss.png";
+export {default as EnemyDrop} from "./Unity/RenderingRevenge/EnemyDrop.png";
+export {default as ShieldThrowing} from "./Unity/RenderingRevenge/ShieldThrowing.png";
+
 
 export {default as ConventioLutheriVideo} from "./Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4";
 export {default as LetItSlideVideo} from "./Unity/LetItSlide/Team02_Trailer_Letitslide_Release.mp4";

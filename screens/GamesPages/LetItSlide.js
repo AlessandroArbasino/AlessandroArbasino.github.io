@@ -1,11 +1,14 @@
-import { View, Text,SafeAreaView } from 'react-native'
+import { View, Text,SafeAreaView,Image } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
-import {LetItSlideVideo} from '../../assets/index';
+import {LetItSlideVideo,CustomizeHead,CustomizeShoes,CustomizeSuit,CustomizeSnowBoard,CustomizeCharacterMain} from '../../assets/index';
+import ImageScroll from '../../components/ImageScroll'
 const LetItSlide = () => {
 
+  const CustomizationImages= [ { Photo : CustomizeCharacterMain}, { Photo : CustomizeHead}, { Photo : CustomizeSuit}, { Photo : CustomizeShoes}, { Photo : CustomizeSnowBoard}];
+  
   const Navigation=useNavigation();
 
   useLayoutEffect(()=> {
@@ -25,7 +28,7 @@ const LetItSlide = () => {
 
       <video width="750" height="500" source={LetItSlideVideo} controls id="VideoGamePlay"  autoPlay></video>
 
-     <View className="flex-wrap">
+     <View className="flex-wrap flex-1">
      <Text className="text-white">
       27/4/2023-11/7/23
 
@@ -50,6 +53,11 @@ Facendo un tool per la "registrazione" delle ossa connesse alla parte da modific
 che successivamente verra letto durante il gioco anziche fare tutto questo a gioco avviato (non ottimale con prestazioni).
       </Text>
      </View>
+
+
+<View className="flex-1">
+      <ImageScroll key={"Customization"} Title={"Customization" } FeatureImages={CustomizationImages}></ImageScroll>
+</View>
 
       <View className="flex-wrap bottom-2">
         <MyLinks key={"Links"}></MyLinks>

@@ -1,11 +1,17 @@
-import { View, Text ,SafeAreaView} from 'react-native'
+import { View, Text ,SafeAreaView,Image} from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
+import ImageScroll from '../../components/ImageScroll'
+import {BeginningMatch,JoinLobby,LobbyCreation,
+  MultiplayerGame,WaitingRoom,CustomGridDimension,CustomGridDimension2} from '../../assets/index';
 
 const LostPlanetMaze = () => {
-  
+
+  const MultiplayerImage= [ { Photo : BeginningMatch}, { Photo : JoinLobby}, { Photo : LobbyCreation}, { Photo : MultiplayerGame}, { Photo : WaitingRoom}];
+  const CustomGridDimensionImages= [ { Photo : CustomGridDimension}, { Photo : CustomGridDimension2}];
+
   const Navigation=useNavigation();
 
   useLayoutEffect(()=> {
@@ -54,6 +60,14 @@ La generazione randomica della mappa di gioco aggiungendoci ulteriori gradi di c
 // link git
       </Text>
      </View>
+
+     <View className="flex-1">
+      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
+    </View>
+
+    <View className="flex-1">
+      <ImageScroll key={"CustomGridDimension"} Title={"CustomGridDimension" } FeatureImages={CustomGridDimensionImages}></ImageScroll>
+    </View>
 
       <View className="flex-wrap bottom-2">
         <MyLinks key={"Links"}></MyLinks>

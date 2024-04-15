@@ -1,10 +1,13 @@
-import { View, Text ,SafeAreaView} from 'react-native'
+import { View, Text ,SafeAreaView,Image} from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
+import ImageScroll from '../../components/ImageScroll'
+import {EclipseExodusImage,Overlay,SunMode,Take} from '../../assets/index';
 
 const EclipseExodus = () => {
+  const GameImages= [ { Photo : EclipseExodusImage}, { Photo : Overlay}, { Photo : SunMode}, { Photo : Take}];
 
   const Navigation=useNavigation();
 
@@ -38,7 +41,11 @@ Risoluzione di bug e finiture.
       </Text>
      </View>
 
-    <View className="flex-wrap bottom-2">
+     <View className="flex-1">
+      <ImageScroll key={"GameImages"} Title={"GameImages" } FeatureImages={GameImages}></ImageScroll>
+    </View>
+
+    <View className="flex-1 bottom-2">
         <MyLinks key={"Links"}></MyLinks>
       </View>
   </SafeAreaView>

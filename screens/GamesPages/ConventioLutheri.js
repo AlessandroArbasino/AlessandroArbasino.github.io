@@ -1,11 +1,17 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView,Image } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
-import {ConventioLutheriVideo} from '../../assets/index';
+import ImageScroll from '../../components/ImageScroll'
+import {ConventioLutheriVideo,ChiselViolin,DrawRope,RopeAdded,RopeTaken,SandPaper,TakeViolinNeck,ViolinBuilt,ViolinPainted} from '../../assets/index';
 
 const ConventioLutheri = () => {
+
+  const GameImages= [ { Photo : ChiselViolin}, { Photo : DrawRope}, { Photo : RopeAdded}, { Photo : RopeTaken},
+    { Photo : SandPaper}, { Photo : TakeViolinNeck}, { Photo : ViolinBuilt}, { Photo : ViolinPainted}
+  ];
+ 
 
   const Navigation=useNavigation();
 
@@ -41,6 +47,10 @@ per questo ho rifatto quasi interamente tutta la parte di codice utilizzando una
 //link git?
       </Text>
      </View>
+
+     <View className="flex-1">
+      <ImageScroll key={"GameImage"} Title={"GameImage" } FeatureImages={GameImages}></ImageScroll>
+    </View>
 
       <View className="flex-wrap bottom-2">
         <MyLinks key={"Links"}></MyLinks>

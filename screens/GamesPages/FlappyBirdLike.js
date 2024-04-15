@@ -1,10 +1,18 @@
-import { View, Text,SafeAreaView } from 'react-native'
+import { View, Text,SafeAreaView,Image } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
+import ImageScroll from '../../components/ImageScroll'
+import {GameScene,GameSimulator,Menu,Standings} from '../../assets/index';
 
 const FlappyBirdLike = () => {
+
+  const GameImages= [ { Photo : GameScene}, { Photo : GameSimulator}, { Photo : Menu}];
+
+   const StandingsImages= [
+    <Image key={"Standings"}  style= {{flex:1 ,width: '100%',height: '100%', resizeMode: 'contain'}} source={Standings}></Image>
+   ];
 
   const Navigation=useNavigation();
 
@@ -22,6 +30,8 @@ const FlappyBirdLike = () => {
       Title="Flappy Bird Like">
     </TitleGoBack>
     </View>
+
+    
 
     <View className="flex-wrap">
     <Text className="text-white">
@@ -45,6 +55,14 @@ Rendendolo anche esse piu scalabile potendo aggiungere facilmente ulteriori live
 // link git
       </Text>
      </View>
+
+     <View className="flex-1">
+      <ImageScroll key={"GameImages"} Title={"GameImages" } FeatureImages={GameImages}></ImageScroll>
+    </View>
+
+    <View className="flex-1">
+      <ImageScroll key={"Standings"} Title={"Standings" } FeatureImages={GameImages}></ImageScroll>
+    </View>
 
     <View className="flex-wrap bottom-2">
         <MyLinks key={"Links"}></MyLinks>
