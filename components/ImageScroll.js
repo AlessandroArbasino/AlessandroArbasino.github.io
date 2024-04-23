@@ -14,8 +14,8 @@ export default function ImageScroll({Title,FeatureImages}) {
     };
 
   return (
-    <View className="flex-1">
-      <Text className="text-white">{Title}</Text>
+    <View className="flex-1 items-center">
+      <h2 className="text-white text-center">{Title}</h2>
     
       <View className="flex-1 items-center justify-center">
       <Carousel

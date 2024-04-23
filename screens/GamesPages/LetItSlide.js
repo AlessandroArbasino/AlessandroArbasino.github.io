@@ -3,12 +3,16 @@ import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
-import {LetItSlideVideo,CustomizeHead,CustomizeShoes,CustomizeSuit,CustomizeSnowBoard,CustomizeCharacterMain} from '../../assets/index';
+import {LetItSlideVideo,CustomizeHead,CustomizeShoes,CustomizeSuit,CustomizeSnowBoard,CustomizeCharacterMain,DrawLine,PatternPrevieuw,LetIiSlideHome,DynamicBoostMenu} from '../../assets/index';
 import ImageScroll from '../../components/ImageScroll'
+import { ScrollView } from 'react-native-gesture-handler'
 const LetItSlide = () => {
 
   const CustomizationImages= [ { Photo : CustomizeCharacterMain}, { Photo : CustomizeHead}, { Photo : CustomizeSuit}, { Photo : CustomizeShoes}, { Photo : CustomizeSnowBoard}];
   
+  const PatternImages= [ { Photo : DrawLine}, { Photo : PatternPrevieuw}];
+
+  const UIImages= [ { Photo : LetIiSlideHome}, { Photo : DynamicBoostMenu}];
   const Navigation=useNavigation();
 
   useLayoutEffect(()=> {
@@ -26,42 +30,58 @@ const LetItSlide = () => {
       </TitleGoBack>
       </View>
 
-      <video width="750" height="500" source={LetItSlideVideo} controls id="VideoGamePlay"  autoPlay></video>
+<ScrollView>
+
+<View className="items-center flex-wrap" >
+      <video width="600" height="400" source={LetItSlideVideo} controls id="VideoGamePlay"  autoPlay></video>
+      </View>
 
      <View className="flex-wrap flex-1">
-     <Text className="text-white">
+     <Text className="text-white text-center">
       27/4/2023-11/7/23
 
-Durante questo progetto ho potuto affrontare e approfondire vari argomenti legati alla costruzione di figure a run time da codice 
-salvataggi e letture tramite json 
-Mi sono occupato di:
--Del sistema di pattern nella sua interezza dall evento di inizio rampa fino alla scomparsa e relativo bonus
-integrandolo nel istema di lettura del file dei dati di gioco contenente tutta la lista adei possibili pattern
--Della UI del menu nella parte di organizzazione e presentazione e integrandola per renderla dinamica con i file dei dati di gioco
--Della realizzazione della pit ottenuta tramite sottrazione di collider 2D e successiva creazione di una mesh che presenta il buco nel 
-punto corretto 
--Del sistema di personalizzazione del personaggio dove ho potuto comprendere il funzoinamento di un rig e come mantenerlo 
-funzionante pur modificando la mesh al quale e collegato 
--Dello shader per la curvatura della pista 
--Della neve (Seppur lasciata in una maniera moolto primitiva)
+      Third and final project of the first year of digital  bros. The concept was to create a sport online mobile game and outlet idea was to make a sort of subway surfer with skateboard.
 
-Ad oggi cosa potrei fare meglio 
-Il sistema di pattern che pur essendo stato affrontato con abbastanza cognizione di capusa per qunato riguarda la struttutura
-pecca in alcuni movimenti facendo risultare la linea "disegnata" non del tutto omogenea.
-Avendo piu tempo e conoscienze a dispososizione affronterei rifarei sicuramente da capo la personalizzazione del personaggio 
-Facendo un tool per la "registrazione" delle ossa connesse alla parte da modificare con la successiva ceazione di un file di testo 
-che successivamente verra letto durante il gioco anziche fare tutto questo a gioco avviato (non ottimale con prestazioni).
-      </Text>
-     </View>
+UI 
+We had an espandibile idea for menus and sub menus and was great. Here i extend the main pattern for all the menus and did all layouts. 
+I know that was to strict to maintain proportion on every device so it was hard to met the concept artist requirements. 
 
+<View className="flex-1">
+      <ImageScroll key={"UI"} Title={"Dynamic UI" } FeatureImages={UIImages}></ImageScroll>
+</View>
+
+Pop up system 
+The pop up was the same with 2 variation depending on how menu buttons it has. 
+Every time a pop up opens has a custom title and description and also one or 2 different delegates for the buttons onclick methods 
+
+<View className="flex-1">
+      <ImageScroll key={"PopUp"} Title={"Pop up System" } FeatureImages={CustomizationImages}></ImageScroll>
+</View>
+
+Customization system 
+TODO
 
 <View className="flex-1">
       <ImageScroll key={"Customization"} Title={"Customization" } FeatureImages={CustomizationImages}></ImageScroll>
 </View>
 
-      <View className="flex-wrap bottom-2">
+Pattern drawing system
+Using a grid i create a UI mesh affinché tringles of a customizable thickness and adding a new tringle every time the line goes on a grid element. 
+The preview pattern fallows the same logics but the grid elements (named using a Number) are connected after a random pattern was chosen among the one written in a json file. 
+In this way they was to easily customizable and saved
+
+<View className="flex-1">
+      <ImageScroll key={"Pattern"} Title={"Pattern system" } FeatureImages={PatternImages}></ImageScroll>
+</View>
+
+      </Text>
+     </View>
+
+      <View className="flex-wrap ">
         <MyLinks key={"Links"}></MyLinks>
       </View>
+
+      </ScrollView>
     </SafeAreaView>
   )
 }
