@@ -42,12 +42,15 @@ const LetItSlide = () => {
 
       Third and final project of the first year of digital  bros. The concept was to create a sport online mobile game and outlet idea was to make a sort of subway surfer with skateboard.
 
+<View className="flex-1">
+      <ImageScroll key={"UI"} Title={"Dynamic UI" } FeatureImages={UIImages}></ImageScroll>
+</View>
 UI 
 We had an espandibile idea for menus and sub menus and was great. Here i extend the main pattern for all the menus and did all layouts. 
 I know that was to strict to maintain proportion on every device so it was hard to met the concept artist requirements. 
 
 <View className="flex-1">
-      <ImageScroll key={"UI"} Title={"Dynamic UI" } FeatureImages={UIImages}></ImageScroll>
+      <ImageScroll key={"PopUp"} Title={"Pop up System" } FeatureImages={CustomizationImages}></ImageScroll>
 </View>
 
 Pop up system 
@@ -55,14 +58,14 @@ The pop up was the same with 2 variation depending on how menu buttons it has.
 Every time a pop up opens has a custom title and description and also one or 2 different delegates for the buttons onclick methods 
 
 <View className="flex-1">
-      <ImageScroll key={"PopUp"} Title={"Pop up System" } FeatureImages={CustomizationImages}></ImageScroll>
+      <ImageScroll key={"Customization"} Title={"Customization" } FeatureImages={CustomizationImages}></ImageScroll>
 </View>
 
 Customization system 
 TODO
 
 <View className="flex-1">
-      <ImageScroll key={"Customization"} Title={"Customization" } FeatureImages={CustomizationImages}></ImageScroll>
+      <ImageScroll key={"Pattern"} Title={"Pattern system" } FeatureImages={PatternImages}></ImageScroll>
 </View>
 
 Pattern drawing system
@@ -70,9 +73,6 @@ Using a grid i create a UI mesh affinché tringles of a customizable thickness a
 The preview pattern fallows the same logics but the grid elements (named using a Number) are connected after a random pattern was chosen among the one written in a json file. 
 In this way they was to easily customizable and saved
 
-<View className="flex-1">
-      <ImageScroll key={"Pattern"} Title={"Pattern system" } FeatureImages={PatternImages}></ImageScroll>
-</View>
 
       </Text>
      </View>
