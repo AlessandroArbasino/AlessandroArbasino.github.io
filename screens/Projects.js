@@ -91,7 +91,7 @@ const Projects = () => {
       
       </View>
 
-      <View className="flex-wrap bottom-2">
+      <View>
         <MyLinks key={"Links"}></MyLinks>
       </View>
     </SafeAreaView>

@@ -1,4 +1,4 @@
-import { View, Text,SafeAreaView,Image } from 'react-native'
+import { View, Text,SafeAreaView,Image,Dimensions } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
@@ -62,7 +62,9 @@ Every time a pop up opens has a custom title and description and also one or 2 d
 </View>
 
 Customization system 
-TODO
+I developed for this game a customization system based on some character assets variations made from 3D artits.
+They were not made for being totally customizable but my system map the component i want to customize to every bone he is attached in
+the main asset and after that the system replace the old component and attach the new one to the same bones as in the original asset
 
 <View className="flex-1">
       <ImageScroll key={"Pattern"} Title={"Pattern system" } FeatureImages={PatternImages}></ImageScroll>

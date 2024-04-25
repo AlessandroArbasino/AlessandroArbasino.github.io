@@ -56,8 +56,9 @@ useLayoutEffect(()=> {
                 <View className="flex-1">
                     <View className="space-y-2">
                         <Text className="text-green-400 font-semibold text-xl">Hi,i'm Alessandro Arbasino</Text>
-                        <Text className="text-white">I'm a videogame programmer</Text>
-                        <Text className="text-white text-xs">I'm from italy and iì'been start studing at digital bross game academy since 1 year</Text>
+                        <Text className="text-white">I'm a junior videogame programmer interested in making UI</Text>
+                        <Text className="text-white text-xs">I'm from italy and i'll been start studing at digital bross game academy since 1 year
+                        I love making games and see every aspect of a game. For this reason i want to make UI </Text>
                     </View>
                     <View>
                     </View>
@@ -110,10 +111,10 @@ useLayoutEffect(()=> {
                             </View>
             </View>
         </View>
-        </View>
-</View>
-<View className="flex-wrap bottom-2">
+<View>
     <MyLinks key={"Links"}></MyLinks>
+</View>
+        </View>
 </View>
     </SafeAreaView>
   );
