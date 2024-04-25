@@ -4,6 +4,7 @@ import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
 import ImageScroll from '../../components/ImageScroll'
+import { ScrollView } from 'react-native-gesture-handler'
 import {BeginningMatch,JoinLobby,LobbyCreation,
   MultiplayerGame,WaitingRoom,CustomGridDimension,CustomGridDimension2} from '../../assets/index';
 
@@ -29,49 +30,76 @@ const LostPlanetMaze = () => {
       </TitleGoBack>
       </View>
 
+
+    <ScrollView>
       <View className="flex-wrap">
       <Text className="text-white">
       23/6/23-9/7/23
 
-Gioco sviluppato interamente da me con l aiuto di carola bonamico pe rla relaizzazine degli sprite in game per una borsa 
-di studio messa in palio da nacon milano
+      I Developer this project all by myself using some asset Made by carola bonamico. 
+This project was a test give by nacon studio Milan some main feature was 
 
-Bisognava creare un gioco con le seguenti caratteristiche 
-// file
+<View className="flex-1">
+      <ImageScroll key={"CustomGridDimension"} Title={"CustomGridDimension" } FeatureImages={CustomGridDimensionImages}></ImageScroll>
+    </View>
 
-Ho inizato lo sviluppo con la chiara idea di programmare ogni voce della lista con il chiaro scopo di riuscire ad affrontare 
-la parte di multiplayer.
-Il gioco é realizzato interamente con tileMap mantenenedo una rappresentazione dei dati di gioco via codice (non utilizzando posizioni nella scena di unity)
-La richiesta di una partita in multiplayer mi ha dato finalmente la possibilita di capire meglio come poterla sviluppare, 
-dopo ave ascoltato vari pareri sui provider di questo servizio ho poatato per photon e i suoi eventi sono stati perfetti per 
-il sistema di dati su cui si fondava il gioco.
+Map genration
+Using tilemps and knowing how each room is connected to the other i make a random grid genration with a customizable dimension 
 
-Cosa ho migliorato
-Un unica pecca grafica aveva penalizzato la prima verione del gioco ovvero la rotazione della freccia una volta sparat,
-infatti essa manteneva sempre la punta della direzione originaria senza adattarla al percorso che stava facendo.
-Dopo averci dedicato qualche tempo e aver compreso piu a fondo l uso delle tile map sono riuscito a sviluppare questa feature
-facendo adattare la direzione in cui punta la freccia al peercorso che sta facendo
+<View className="flex-1">
+      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
+    </View>
 
-Cosa posso migliorare
-In alcuni punti la gerarchia di classi lascia a dediderare a fronte di una arichittettura non molto chiara a inizio progetto
-a causa dell integrazione della modalita multiplayer che non sapevo cosa avrebbe richiesto.
-La generazione randomica della mappa di gioco aggiungendoci ulteriori gradi di complessita 
+Online Multiplayer 
+My first ever approach to a multiplayer game. I use Photon api to send events and sync the 2 player position, map, game state and turn. 
+To easy tale party in a match there is a lobby and if a lobby is already active the 2 player directly goes into the match. 
+You can decide to access into a certain match with a given code or just a random one. 
+
+<View className="flex-1">
+      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
+    </View>
+
+Tunnel 
+A tunnel is a room with 2 exit 
+One of the feature was a tunnel system where a player goes directly at the room with 3 or more exits. 
+With a iterable method called every x seconds the player (with no movements available) goes from every cell of the tunnel and ends its movement when there is a room with at least 3 door
+
+<View className="flex-1">
+      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
+    </View>
+
+Arrow
+Arrows follows the same tunnel Logic as player they goes in one direction and disapper of the find a monster or a wall
+Each player has 3 arrows and the first one that use all 3 lose the game 
+
+<View className="flex-1">
+      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
+    </View>
+
+Holes and monster preview
+Everithing that can kill the player has a preview generated with the map that allows him to see if a movement end near one of them (they can stuck in the same cell) 
+
+
+<View className="flex-1">
+      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
+    </View>
+
+Fog of war 
+During a match the player has to discover the map 
+He can see just the path he made 
+I did this by using a tilemap and delete the cell the player discover
 
 // link git
       </Text>
      </View>
 
-     <View className="flex-1">
-      <ImageScroll key={"Multiplayer"} Title={"Multiplayer" } FeatureImages={MultiplayerImage}></ImageScroll>
-    </View>
 
-    <View className="flex-1">
-      <ImageScroll key={"CustomGridDimension"} Title={"CustomGridDimension" } FeatureImages={CustomGridDimensionImages}></ImageScroll>
-    </View>
+  
 
-      <View className="flex-wrap bottom-2">
+      <View className="flex-wrap">
         <MyLinks key={"Links"}></MyLinks>
       </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }
