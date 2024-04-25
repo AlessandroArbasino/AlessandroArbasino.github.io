@@ -33,7 +33,7 @@ const LetItSlide = () => {
 <ScrollView>
 
 <View className="items-center flex-wrap" >
-      <video width="600" height="400" source={LetItSlideVideo} controls id="VideoGamePlay"  autoPlay></video>
+      <video  width={Dimensions.get("window").width/2} height={(Dimensions.get("window").width * 2)/6} controls id="VideoGamePlay"  autoPlay></video>
       </View>
 
      <View className="flex-wrap flex-1">

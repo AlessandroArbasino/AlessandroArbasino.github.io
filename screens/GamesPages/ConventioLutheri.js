@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView,Image } from 'react-native'
+import { View, Text, SafeAreaView,Image,Dimensions } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import TitleGoBack from '../../components/TitleGoBack'
 import { useNavigation } from '@react-navigation/native'
@@ -35,7 +35,7 @@ const ConventioLutheri = () => {
       <ScrollView>
 
       <View className="items-center flex-wrap" >
-      <video  width="600" height="400" source={ConventioLutheriVideo} controls id="VideoGamePlay"></video>
+      <video  width={Dimensions.get("window").width/2} height={(Dimensions.get("window").width * 2)/6} source={ConventioLutheriVideo} controls id="VideoGamePlay"></video>
       </View>
      <View className="flex-wrap">
      <Text className="text-white text-center">
