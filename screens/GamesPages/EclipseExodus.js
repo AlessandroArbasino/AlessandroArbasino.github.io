@@ -5,9 +5,12 @@ import { useNavigation } from '@react-navigation/native'
 import MyLinks from '../../components/MyLinks'
 import ImageScroll from '../../components/ImageScroll'
 import {EclipseExodusImage,Overlay,SunMode,Take} from '../../assets/index';
+import { ScrollView } from 'react-native-gesture-handler'
 
 const EclipseExodus = () => {
-  const GameImages= [ { Photo : EclipseExodusImage}, { Photo : Overlay}, { Photo : SunMode}, { Photo : Take}];
+  const SunAndMoonPuzzlesImages= [  { Photo : SunMode}];
+  const DayPartBasedCluesImages= [ { Photo : EclipseExodusImage}];
+  const PlacingObjectPuzzlesImages= [  { Photo : Overlay}, { Photo : Take}];
 
   const Navigation=useNavigation();
 
@@ -25,29 +28,47 @@ const EclipseExodus = () => {
       Title="Eclipse Exodus">
     </TitleGoBack>
     </View>
+    <ScrollView>
+    
+      <View className="flex-wrap">
+    <Text className="text-white text-center">
+      Marzo 2023/Aprile 2023 
 
-    <View className="flex-wrap">
-    <Text className="text-white">
-      Progetto in terza persona che mi ha fatto affrontare un argomento che fino a quel momento mi era stato avverso ossia le animazioni.
-In questo titolo (Pur mancante della sua parte 3D completa) ho studiato meglio le animazioni con root motion e come raggoglirere e piazzare oggetti 
-nella maniera piu verosimile possibile.
+      First Experience with root motion animation 
 
-Cosa posso migliorare
-Purtroppo il poco tempo a disposizione per sviluppare il progetto, la concomitanza di altri progetti e le animazioni prese da mixamo (e quidi non delv tutto adatte allo scopo)
-hanno fatto rasggiungere un livello apprezzabile slo in ulcuni aspetti del gioco trlasciando altri.
-Cio che posso migliorare e aggiungere vari livelli di anizmazioni per rendere la raccolta dell oggetto e la sua messa a terra 
-smooth a ogni altezza.
-Risoluzione di bug e finiture. 
-      </Text>
-     </View>
 
-     <View className="flex-1">
-      <ImageScroll key={"GameImages"} Title={"GameImages" } FeatureImages={GameImages}></ImageScroll>
+Taking object with animation and parenting them to the bone so it remains with the player.
+The game is based on day part unloking puzzles. 
+Everhing that dipends on the part of the day listen a delegate on a manager knowing that the state is changed
+
+<View className="flex-1">
+      <ImageScroll key={"SunAndMoonPuzzles"} Title={"Sun and moon puzzles" } FeatureImages={SunAndMoonPuzzlesImages}></ImageScroll>
     </View>
 
-    <View className="flex-1 bottom-2">
+Changing the day condition unlock different part of the puzzle by intercat with a lever. 
+
+<View className="flex-1">
+      <ImageScroll key={"DayPartBasedClues"} Title={"Day part based clue" } FeatureImages={DayPartBasedCluesImages}></ImageScroll>
+    </View>
+
+Across the map are spread some clues to solve the escape room. Those are visibile just during a given part of the day 
+
+<View className="flex-1">
+      <ImageScroll key={"PlacingObjectPuzzles"} Title={"Placing object puzzles" } FeatureImages={PlacingObjectPuzzlesImages}></ImageScroll>
+    </View>
+
+Placing object puzzles
+Some puzzles to ne solved need a specify element to be placed into a box collider. 
+When an object is placed an event is rised to the puzzle manager sending a reference of the placed object.
+The manager check if is the correct one and if the puzzle is complete
+
+      </Text>
+     </View>
+      
+      <View className="flex-wrap ">
         <MyLinks key={"Links"}></MyLinks>
       </View>
+      </ScrollView>
   </SafeAreaView>
   )
 }
