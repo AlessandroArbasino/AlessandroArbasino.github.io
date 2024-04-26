@@ -7,7 +7,7 @@ import {EuropassCv,LatexCv} from '../assets';
 
 const MyLinks = () => {
   return (
-    <View className=" flex-row space-x-4 right-2 left-2">
+    <View className="flex-1 flex-row space-x-4 right-2 left-2">
 
       <View className="text-white flex-wrap justify-center">
         <Text className="text-white ">Social Media Accounts :</Text>
