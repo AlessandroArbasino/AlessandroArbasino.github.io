@@ -36,7 +36,7 @@ const ConventioLutheri = () => {
 
       <View className="items-center flex-wrap" >
       <video  width={Dimensions.get("window").width/2} height={(Dimensions.get("window").width * 2)/6} controls>
-        <source src="https://raw.githubusercontent.com/AlessandroArbasino/AlessandroArbasino.github.io/blob/main/assets/Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4" type="video/mp4">  </source>
+        <source src="https://github.com/AlessandroArbasino/AlessandroArbasino.github.io/blob/main/assets/Unity/ConventioLutheri/Conventio_lutheri_trailer.mp4" type="video/mp4">  </source>
       </video>
       </View>
      <View className="flex-wrap">
