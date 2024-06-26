@@ -35,9 +35,9 @@ const ConventioLutheri = () => {
       <ScrollView>
 
       <View className="items-center flex-wrap" >
-      <video  width={Dimensions.get("window").width/2} height={(Dimensions.get("window").width * 2)/6} controls>
-        <source src="https://drive.google.com/file/d/1iuSzWBVB0Kw61_bZci_HrC6ONl5bL2UG/preview" type="video/mp4"/>
-      </video>
+
+      <iframe width={Dimensions.get("window").width/2} height={(Dimensions.get("window").width * 2)/6} controls src="https://drive.google.com/file/d/1iuSzWBVB0Kw61_bZci_HrC6ONl5bL2UG/preview" allow="autoplay"></iframe>
+
       </View>
      <View className="flex-wrap">
      <Text className="text-white text-center">
